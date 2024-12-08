@@ -12,6 +12,12 @@ $ d compose up
 $ d compose restart envoy
 ```
 
+## Attack
+
+```shell
+$ vegeta attack -duration=60s -targets=attack.txt -rate=40 | tee results.bin | vegeta report
+```
+
 ## Cleanup
 
 ```shell
