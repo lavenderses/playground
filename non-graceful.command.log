@@ -1,0 +1,577 @@
+vegeta attack -duration=60s -targets=attack.txt -rate=40 | tee results.bin | vegeta report
+Requests      [total, rate, throughput]         2400, 40.02, 14.51
+Duration      [total, attack, wait]             1m14s, 59.975s, 14.404s
+Latencies     [min, mean, 50, 90, 95, 99, max]  262.047µs, 4.293s, 3.391s, 9.327s, 11.306s, 15.003s, 16.062s
+Bytes In      [total, mean]                     24099, 10.04
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           44.96%
+Status Codes  [code:count]                      0:1261  200:1079  504:60  
+Error Set:
+Get "http://localhost:10001/3452": EOF
+Get "http://localhost:10001/1460": EOF
+Get "http://localhost:10001/7356": EOF
+Get "http://localhost:10001/9802": EOF
+Get "http://localhost:10001/6327": EOF
+Get "http://localhost:10001/9266": EOF
+Get "http://localhost:10001/8897": EOF
+Get "http://localhost:10001/7775": EOF
+Get "http://localhost:10001/4175": EOF
+Get "http://localhost:10001/3098": EOF
+Get "http://localhost:10001/8842": EOF
+Get "http://localhost:10001/9114": EOF
+Get "http://localhost:10001/2344": EOF
+Get "http://localhost:10001/9261": EOF
+Get "http://localhost:10001/8949": EOF
+Get "http://localhost:10001/8304": EOF
+Get "http://localhost:10001/8401": EOF
+Get "http://localhost:10001/1263": EOF
+Get "http://localhost:10001/3743": EOF
+Get "http://localhost:10001/7457": EOF
+Get "http://localhost:10001/4157": EOF
+Get "http://localhost:10001/7931": EOF
+Get "http://localhost:10001/8145": EOF
+Get "http://localhost:10001/8855": EOF
+Get "http://localhost:10001/5788": EOF
+Get "http://localhost:10001/3352": EOF
+Get "http://localhost:10001/3393": EOF
+Get "http://localhost:10001/2914": EOF
+Get "http://localhost:10001/4890": EOF
+Get "http://localhost:10001/9230": EOF
+Get "http://localhost:10001/5398": EOF
+Get "http://localhost:10001/4026": EOF
+Get "http://localhost:10001/5739": EOF
+Get "http://localhost:10001/6619": EOF
+Get "http://localhost:10001/3253": EOF
+Get "http://localhost:10001/2368": EOF
+Get "http://localhost:10001/2690": EOF
+Get "http://localhost:10001/6342": EOF
+Get "http://localhost:10001/8645": EOF
+Get "http://localhost:10001/9909": EOF
+Get "http://localhost:10001/6364": EOF
+Get "http://localhost:10001/7785": EOF
+Get "http://localhost:10001/4416": EOF
+Get "http://localhost:10001/7927": EOF
+Get "http://localhost:10001/5640": EOF
+Get "http://localhost:10001/8626": EOF
+Get "http://localhost:10001/4723": EOF
+Get "http://localhost:10001/5977": EOF
+Get "http://localhost:10001/9898": EOF
+Get "http://localhost:10001/9570": EOF
+Get "http://localhost:10001/3931": EOF
+Get "http://localhost:10001/3530": EOF
+Get "http://localhost:10001/7280": EOF
+Get "http://localhost:10001/4900": EOF
+Get "http://localhost:10001/5523": EOF
+Get "http://localhost:10001/2068": EOF
+Get "http://localhost:10001/7178": EOF
+Get "http://localhost:10001/5415": EOF
+Get "http://localhost:10001/2726": EOF
+Get "http://localhost:10001/3858": EOF
+Get "http://localhost:10001/9267": EOF
+Get "http://localhost:10001/8110": EOF
+Get "http://localhost:10001/3003": EOF
+Get "http://localhost:10001/4736": EOF
+Get "http://localhost:10001/4365": EOF
+Get "http://localhost:10001/9775": EOF
+Get "http://localhost:10001/4676": EOF
+Get "http://localhost:10001/4384": EOF
+Get "http://localhost:10001/5719": EOF
+Get "http://localhost:10001/8513": EOF
+Get "http://localhost:10001/9101": EOF
+Get "http://localhost:10001/8516": EOF
+Get "http://localhost:10001/2310": EOF
+Get "http://localhost:10001/9938": EOF
+Get "http://localhost:10001/3274": EOF
+Get "http://localhost:10001/9309": EOF
+Get "http://localhost:10001/7255": EOF
+Get "http://localhost:10001/1679": EOF
+Get "http://localhost:10001/3967": EOF
+Get "http://localhost:10001/8375": EOF
+Get "http://localhost:10001/5588": EOF
+Get "http://localhost:10001/9003": EOF
+Get "http://localhost:10001/6685": EOF
+Get "http://localhost:10001/9205": EOF
+Get "http://localhost:10001/6065": EOF
+Get "http://localhost:10001/6674": EOF
+Get "http://localhost:10001/3457": EOF
+Get "http://localhost:10001/4302": EOF
+Get "http://localhost:10001/6324": EOF
+Get "http://localhost:10001/7095": EOF
+Get "http://localhost:10001/8259": EOF
+Get "http://localhost:10001/2469": EOF
+Get "http://localhost:10001/3206": EOF
+Get "http://localhost:10001/9826": EOF
+Get "http://localhost:10001/1436": EOF
+Get "http://localhost:10001/9850": EOF
+Get "http://localhost:10001/7076": EOF
+Get "http://localhost:10001/4804": EOF
+Get "http://localhost:10001/5154": EOF
+Get "http://localhost:10001/9971": EOF
+Get "http://localhost:10001/7526": EOF
+Get "http://localhost:10001/3416": EOF
+Get "http://localhost:10001/6901": EOF
+Get "http://localhost:10001/3692": EOF
+Get "http://localhost:10001/3140": EOF
+Get "http://localhost:10001/8786": EOF
+Get "http://localhost:10001/4180": EOF
+Get "http://localhost:10001/5601": EOF
+Get "http://localhost:10001/9297": EOF
+Get "http://localhost:10001/7542": EOF
+Get "http://localhost:10001/5990": EOF
+Get "http://localhost:10001/6979": EOF
+Get "http://localhost:10001/4240": EOF
+Get "http://localhost:10001/5101": EOF
+Get "http://localhost:10001/3791": EOF
+Get "http://localhost:10001/9680": EOF
+Get "http://localhost:10001/6038": EOF
+Get "http://localhost:10001/7804": EOF
+Get "http://localhost:10001/1029": EOF
+Get "http://localhost:10001/9649": EOF
+Get "http://localhost:10001/4315": EOF
+Get "http://localhost:10001/6125": EOF
+Get "http://localhost:10001/4794": EOF
+Get "http://localhost:10001/8327": EOF
+Get "http://localhost:10001/2889": EOF
+Get "http://localhost:10001/9371": EOF
+Get "http://localhost:10001/9052": EOF
+Get "http://localhost:10001/3255": EOF
+Get "http://localhost:10001/4549": EOF
+Get "http://localhost:10001/9046": EOF
+Get "http://localhost:10001/9210": EOF
+Get "http://localhost:10001/8913": EOF
+Get "http://localhost:10001/4575": EOF
+Get "http://localhost:10001/4867": EOF
+Get "http://localhost:10001/4321": EOF
+Get "http://localhost:10001/5546": EOF
+Get "http://localhost:10001/7342": EOF
+Get "http://localhost:10001/9970": EOF
+Get "http://localhost:10001/3315": EOF
+Get "http://localhost:10001/3330": EOF
+Get "http://localhost:10001/2679": EOF
+Get "http://localhost:10001/9945": EOF
+Get "http://localhost:10001/2044": EOF
+Get "http://localhost:10001/5320": EOF
+Get "http://localhost:10001/5487": EOF
+Get "http://localhost:10001/5150": EOF
+Get "http://localhost:10001/8277": read tcp 127.0.0.1:38745->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/6539": read tcp 127.0.0.1:53069->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/8281": read tcp 127.0.0.1:35245->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/3040": EOF
+Get "http://localhost:10001/7596": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/3709": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/5092": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/6340": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/9356": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/7200": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/9273": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/7682": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/6451": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/1431": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/4359": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/7993": read tcp 127.0.0.1:44767->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/2201": read tcp 127.0.0.1:49833->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/8764": read tcp 127.0.0.1:46801->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/8937": read tcp 127.0.0.1:42195->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/9987": read tcp 127.0.0.1:35989->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/7698": EOF
+Get "http://localhost:10001/9793": EOF
+Get "http://localhost:10001/4514": EOF
+Get "http://localhost:10001/4971": EOF
+Get "http://localhost:10001/7760": EOF
+Get "http://localhost:10001/7475": EOF
+Get "http://localhost:10001/5259": EOF
+Get "http://localhost:10001/3801": EOF
+Get "http://localhost:10001/7313": EOF
+Get "http://localhost:10001/5713": EOF
+Get "http://localhost:10001/8491": EOF
+Get "http://localhost:10001/4288": EOF
+Get "http://localhost:10001/9421": EOF
+Get "http://localhost:10001/5255": EOF
+Get "http://localhost:10001/2170": EOF
+Get "http://localhost:10001/4698": EOF
+Get "http://localhost:10001/9439": EOF
+Get "http://localhost:10001/2209": EOF
+Get "http://localhost:10001/9258": EOF
+Get "http://localhost:10001/8002": EOF
+Get "http://localhost:10001/7131": EOF
+Get "http://localhost:10001/6212": EOF
+Get "http://localhost:10001/6782": EOF
+Get "http://localhost:10001/7405": EOF
+Get "http://localhost:10001/5296": EOF
+Get "http://localhost:10001/3232": EOF
+Get "http://localhost:10001/6214": EOF
+Get "http://localhost:10001/7487": EOF
+Get "http://localhost:10001/8967": EOF
+Get "http://localhost:10001/7087": EOF
+Get "http://localhost:10001/6491": EOF
+Get "http://localhost:10001/9719": EOF
+Get "http://localhost:10001/6788": EOF
+Get "http://localhost:10001/9807": EOF
+Get "http://localhost:10001/5518": EOF
+Get "http://localhost:10001/5346": EOF
+Get "http://localhost:10001/4305": EOF
+Get "http://localhost:10001/7225": EOF
+Get "http://localhost:10001/6113": EOF
+Get "http://localhost:10001/9801": EOF
+Get "http://localhost:10001/1123": EOF
+Get "http://localhost:10001/3673": EOF
+Get "http://localhost:10001/8716": EOF
+Get "http://localhost:10001/7962": EOF
+Get "http://localhost:10001/8892": EOF
+Get "http://localhost:10001/5300": EOF
+Get "http://localhost:10001/8338": EOF
+Get "http://localhost:10001/5829": EOF
+Get "http://localhost:10001/6693": EOF
+Get "http://localhost:10001/7998": EOF
+Get "http://localhost:10001/4554": EOF
+Get "http://localhost:10001/9556": EOF
+Get "http://localhost:10001/5915": EOF
+Get "http://localhost:10001/8058": EOF
+Get "http://localhost:10001/2007": EOF
+Get "http://localhost:10001/7989": EOF
+Get "http://localhost:10001/9102": EOF
+Get "http://localhost:10001/3455": EOF
+Get "http://localhost:10001/9899": EOF
+Get "http://localhost:10001/3606": EOF
+Get "http://localhost:10001/7201": EOF
+Get "http://localhost:10001/3484": EOF
+Get "http://localhost:10001/5309": EOF
+Get "http://localhost:10001/4624": EOF
+Get "http://localhost:10001/6061": EOF
+Get "http://localhost:10001/6219": EOF
+Get "http://localhost:10001/7787": EOF
+Get "http://localhost:10001/5999": EOF
+Get "http://localhost:10001/9416": EOF
+Get "http://localhost:10001/3984": EOF
+Get "http://localhost:10001/7284": EOF
+Get "http://localhost:10001/6540": EOF
+Get "http://localhost:10001/5572": EOF
+Get "http://localhost:10001/8565": EOF
+Get "http://localhost:10001/5716": EOF
+Get "http://localhost:10001/3194": EOF
+Get "http://localhost:10001/2822": EOF
+Get "http://localhost:10001/2573": EOF
+Get "http://localhost:10001/6308": EOF
+Get "http://localhost:10001/6148": EOF
+Get "http://localhost:10001/9770": EOF
+Get "http://localhost:10001/5922": EOF
+Get "http://localhost:10001/8090": EOF
+Get "http://localhost:10001/6953": EOF
+Get "http://localhost:10001/7627": EOF
+Get "http://localhost:10001/3900": EOF
+Get "http://localhost:10001/4573": EOF
+Get "http://localhost:10001/6222": EOF
+Get "http://localhost:10001/4148": EOF
+Get "http://localhost:10001/6383": EOF
+Get "http://localhost:10001/2739": EOF
+Get "http://localhost:10001/3478": EOF
+Get "http://localhost:10001/4735": EOF
+Get "http://localhost:10001/7912": EOF
+Get "http://localhost:10001/6298": EOF
+Get "http://localhost:10001/5134": EOF
+Get "http://localhost:10001/7451": EOF
+Get "http://localhost:10001/6735": EOF
+Get "http://localhost:10001/6319": EOF
+Get "http://localhost:10001/7461": EOF
+Get "http://localhost:10001/9566": EOF
+Get "http://localhost:10001/8109": EOF
+Get "http://localhost:10001/5649": EOF
+Get "http://localhost:10001/6846": EOF
+Get "http://localhost:10001/8566": EOF
+Get "http://localhost:10001/8890": EOF
+Get "http://localhost:10001/8153": EOF
+Get "http://localhost:10001/2756": EOF
+Get "http://localhost:10001/6009": EOF
+Get "http://localhost:10001/3219": EOF
+Get "http://localhost:10001/6771": EOF
+Get "http://localhost:10001/7930": EOF
+Get "http://localhost:10001/6198": EOF
+Get "http://localhost:10001/4704": EOF
+Get "http://localhost:10001/1082": EOF
+Get "http://localhost:10001/1207": EOF
+Get "http://localhost:10001/8057": EOF
+Get "http://localhost:10001/9358": EOF
+Get "http://localhost:10001/5694": EOF
+Get "http://localhost:10001/6263": EOF
+Get "http://localhost:10001/7904": EOF
+Get "http://localhost:10001/6981": EOF
+Get "http://localhost:10001/9153": EOF
+Get "http://localhost:10001/8455": EOF
+Get "http://localhost:10001/7455": EOF
+Get "http://localhost:10001/9095": EOF
+Get "http://localhost:10001/3911": EOF
+Get "http://localhost:10001/9684": EOF
+Get "http://localhost:10001/5256": EOF
+Get "http://localhost:10001/7550": EOF
+Get "http://localhost:10001/4206": EOF
+Get "http://localhost:10001/3685": EOF
+Get "http://localhost:10001/2516": EOF
+Get "http://localhost:10001/8673": EOF
+Get "http://localhost:10001/5981": EOF
+Get "http://localhost:10001/3977": EOF
+Get "http://localhost:10001/5833": EOF
+Get "http://localhost:10001/6633": EOF
+Get "http://localhost:10001/5585": EOF
+Get "http://localhost:10001/6993": EOF
+Get "http://localhost:10001/6074": EOF
+Get "http://localhost:10001/5733": EOF
+Get "http://localhost:10001/9430": EOF
+Get "http://localhost:10001/4739": EOF
+Get "http://localhost:10001/3300": EOF
+Get "http://localhost:10001/8323": EOF
+Get "http://localhost:10001/4907": EOF
+Get "http://localhost:10001/6621": EOF
+Get "http://localhost:10001/6137": EOF
+Get "http://localhost:10001/7546": EOF
+Get "http://localhost:10001/4277": EOF
+Get "http://localhost:10001/8934": EOF
+Get "http://localhost:10001/7810": EOF
+Get "http://localhost:10001/5868": EOF
+Get "http://localhost:10001/2511": EOF
+Get "http://localhost:10001/9778": EOF
+Get "http://localhost:10001/9656": EOF
+Get "http://localhost:10001/3632": EOF
+Get "http://localhost:10001/7276": EOF
+Get "http://localhost:10001/8023": EOF
+Get "http://localhost:10001/6905": EOF
+Get "http://localhost:10001/5405": EOF
+Get "http://localhost:10001/6632": EOF
+Get "http://localhost:10001/3065": EOF
+Get "http://localhost:10001/5982": EOF
+Get "http://localhost:10001/6497": EOF
+Get "http://localhost:10001/9051": EOF
+Get "http://localhost:10001/6348": EOF
+Get "http://localhost:10001/4925": EOF
+Get "http://localhost:10001/3424": EOF
+Get "http://localhost:10001/7509": EOF
+Get "http://localhost:10001/8459": EOF
+Get "http://localhost:10001/2115": EOF
+Get "http://localhost:10001/6363": EOF
+Get "http://localhost:10001/8866": EOF
+Get "http://localhost:10001/8862": EOF
+Get "http://localhost:10001/3343": EOF
+Get "http://localhost:10001/1479": read tcp 127.0.0.1:53479->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/5964": read tcp 127.0.0.1:40801->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/4072": read tcp 127.0.0.1:35877->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/9362": read tcp 127.0.0.1:49139->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/9367": read tcp 127.0.0.1:36311->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/3875": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/2897": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/6885": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/7078": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/3714": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/1540": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/3348": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/8075": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/9522": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/3791": read tcp 127.0.0.1:38209->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/5281": read tcp 127.0.0.1:42467->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/7579": read tcp 127.0.0.1:42429->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/3060": read tcp 127.0.0.1:52325->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/4267": read tcp 127.0.0.1:32899->127.0.0.1:10001: read: connection reset by peer
+504 Gateway Timeout
+Get "http://localhost:10001/3348": EOF
+Get "http://localhost:10001/7596": EOF
+Get "http://localhost:10001/8281": EOF
+Get "http://localhost:10001/5342": EOF
+Get "http://localhost:10001/7579": EOF
+Get "http://localhost:10001/8764": EOF
+Get "http://localhost:10001/8733": EOF
+Get "http://localhost:10001/7078": EOF
+Get "http://localhost:10001/4909": EOF
+Get "http://localhost:10001/5964": EOF
+Get "http://localhost:10001/9522": EOF
+Get "http://localhost:10001/9367": EOF
+Get "http://localhost:10001/1557": EOF
+Get "http://localhost:10001/8075": EOF
+Get "http://localhost:10001/8773": EOF
+Get "http://localhost:10001/1055": EOF
+Get "http://localhost:10001/1177": EOF
+Get "http://localhost:10001/6885": EOF
+Get "http://localhost:10001/6098": EOF
+Get "http://localhost:10001/2455": EOF
+Get "http://localhost:10001/2231": EOF
+Get "http://localhost:10001/7793": EOF
+Get "http://localhost:10001/7493": EOF
+Get "http://localhost:10001/2833": EOF
+Get "http://localhost:10001/5460": EOF
+Get "http://localhost:10001/2307": EOF
+Get "http://localhost:10001/2890": EOF
+Get "http://localhost:10001/8324": EOF
+Get "http://localhost:10001/3705": EOF
+Get "http://localhost:10001/7917": EOF
+Get "http://localhost:10001/4581": EOF
+Get "http://localhost:10001/6539": EOF
+Get "http://localhost:10001/5594": EOF
+Get "http://localhost:10001/5082": EOF
+Get "http://localhost:10001/4159": EOF
+Get "http://localhost:10001/2570": EOF
+Get "http://localhost:10001/2953": EOF
+Get "http://localhost:10001/1337": EOF
+Get "http://localhost:10001/2434": EOF
+Get "http://localhost:10001/3462": EOF
+Get "http://localhost:10001/7347": EOF
+Get "http://localhost:10001/8380": EOF
+Get "http://localhost:10001/1120": EOF
+Get "http://localhost:10001/8467": EOF
+Get "http://localhost:10001/4091": EOF
+Get "http://localhost:10001/1306": EOF
+Get "http://localhost:10001/4072": EOF
+Get "http://localhost:10001/1547": EOF
+Get "http://localhost:10001/7497": EOF
+Get "http://localhost:10001/1826": EOF
+Get "http://localhost:10001/9362": EOF
+Get "http://localhost:10001/1051": EOF
+Get "http://localhost:10001/9728": EOF
+Get "http://localhost:10001/6126": EOF
+Get "http://localhost:10001/6613": EOF
+Get "http://localhost:10001/7662": EOF
+Get "http://localhost:10001/2240": EOF
+Get "http://localhost:10001/2376": EOF
+Get "http://localhost:10001/1033": EOF
+Get "http://localhost:10001/9421": read tcp 127.0.0.1:40027->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/9898": read tcp 127.0.0.1:39185->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/8855": read tcp 127.0.0.1:47907->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/2469": read tcp 127.0.0.1:49755->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/8304": read tcp 127.0.0.1:46965->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/3206": read tcp 127.0.0.1:56079->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/6125": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/8277": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/6539": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/8281": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/3040": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/6905": read tcp 127.0.0.1:59227->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/4221": read tcp 127.0.0.1:44127->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/4971": read tcp 127.0.0.1:58681->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/5256": read tcp 127.0.0.1:59297->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/8566": read tcp 127.0.0.1:34381->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/3878": EOF
+Get "http://localhost:10001/1540": EOF
+Get "http://localhost:10001/1437": EOF
+Get "http://localhost:10001/1012": EOF
+Get "http://localhost:10001/2467": EOF
+Get "http://localhost:10001/2051": EOF
+Get "http://localhost:10001/8937": EOF
+Get "http://localhost:10001/1003": EOF
+Get "http://localhost:10001/5281": EOF
+Get "http://localhost:10001/3568": EOF
+Get "http://localhost:10001/2163": EOF
+Get "http://localhost:10001/3385": EOF
+Get "http://localhost:10001/9273": EOF
+Get "http://localhost:10001/4267": EOF
+Get "http://localhost:10001/3529": EOF
+Get "http://localhost:10001/1958": EOF
+Get "http://localhost:10001/7993": EOF
+Get "http://localhost:10001/1431": EOF
+Get "http://localhost:10001/9987": EOF
+Get "http://localhost:10001/2088": EOF
+Get "http://localhost:10001/2635": EOF
+Get "http://localhost:10001/2598": EOF
+Get "http://localhost:10001/1851": EOF
+Get "http://localhost:10001/1548": EOF
+Get "http://localhost:10001/4359": EOF
+Get "http://localhost:10001/1626": EOF
+Get "http://localhost:10001/4257": EOF
+Get "http://localhost:10001/2900": EOF
+Get "http://localhost:10001/3714": EOF
+Get "http://localhost:10001/2897": EOF
+Get "http://localhost:10001/1479": EOF
+Get "http://localhost:10001/7682": EOF
+Get "http://localhost:10001/1290": EOF
+Get "http://localhost:10001/4389": EOF
+Get "http://localhost:10001/3875": EOF
+Get "http://localhost:10001/1593": EOF
+Get "http://localhost:10001/2857": EOF
+Get "http://localhost:10001/6451": EOF
+Get "http://localhost:10001/3084": EOF
+Get "http://localhost:10001/3060": EOF
+Get "http://localhost:10001/7347": read tcp 127.0.0.1:53571->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/6098": read tcp 127.0.0.1:58535->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/7793": read tcp 127.0.0.1:48195->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/2067": read tcp 127.0.0.1:34425->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/3705": read tcp 127.0.0.1:42965->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/2231": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/8773": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/7917": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/4159": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/1177": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/5342": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/5594": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/5415": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/8949": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/2725": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/6619": read tcp 127.0.0.1:46641->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/2438": read tcp 127.0.0.1:50713->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/3572": read tcp 127.0.0.1:60067->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/2758": read tcp 127.0.0.1:48639->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/8626": read tcp 127.0.0.1:52883->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/2201": EOF
+Get "http://localhost:10001/7200": EOF
+Get "http://localhost:10001/3350": EOF
+Get "http://localhost:10001/2261": EOF
+Get "http://localhost:10001/4221": EOF
+Get "http://localhost:10001/1249": EOF
+Get "http://localhost:10001/5092": EOF
+Get "http://localhost:10001/8277": EOF
+Get "http://localhost:10001/1990": EOF
+Get "http://localhost:10001/9356": EOF
+Get "http://localhost:10001/2578": EOF
+Get "http://localhost:10001/2356": EOF
+Get "http://localhost:10001/2156": EOF
+Get "http://localhost:10001/2663": EOF
+Get "http://localhost:10001/2166": EOF
+Get "http://localhost:10001/3709": EOF
+Get "http://localhost:10001/2638": EOF
+Get "http://localhost:10001/6340": EOF
+Get "http://localhost:10001/8937": read tcp 127.0.0.1:50001->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/9987": read tcp 127.0.0.1:54145->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/3385": read tcp 127.0.0.1:60703->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/6137": read tcp 127.0.0.1:43035->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/7455": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/1812": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/7405": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/8455": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/7475": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/1430": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/3036": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/2522": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/4389": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/6782": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/8890": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/3223": read tcp 127.0.0.1:42049->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/2256": read tcp 127.0.0.1:35519->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/6113": read tcp 127.0.0.1:59691->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/7201": read tcp 127.0.0.1:60239->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/5981": read tcp 127.0.0.1:57859->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/1587": EOF
+Get "http://localhost:10001/1303": EOF
+Get "http://localhost:10001/4031": EOF
+Get "http://localhost:10001/1709": EOF
+Get "http://localhost:10001/4076": EOF
+Get "http://localhost:10001/3144": EOF
+Get "http://localhost:10001/2306": EOF
+Get "http://localhost:10001/2603": EOF
+Get "http://localhost:10001/1399": EOF
+Get "http://localhost:10001/1441": EOF
+Get "http://localhost:10001/2643": EOF
+Get "http://localhost:10001/1465": EOF
+Get "http://localhost:10001/1731": EOF
+Get "http://localhost:10001/9778": read tcp 127.0.0.1:42591->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/9430": read tcp 127.0.0.1:35649->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/5255": read tcp 127.0.0.1:56681->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/5922": read tcp 127.0.0.1:52219->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/5585": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/7787": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/2739": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/9719": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/6219": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/6383": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/9051": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/1769": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/9102": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/3685": dial tcp 0.0.0.0:0->127.0.0.1:10001: connect: connection refused
+Get "http://localhost:10001/5915": read tcp 127.0.0.1:57385->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/7451": read tcp 127.0.0.1:60193->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/7962": read tcp 127.0.0.1:47725->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/7087": read tcp 127.0.0.1:51535->127.0.0.1:10001: read: connection reset by peer
+Get "http://localhost:10001/5733": read tcp 127.0.0.1:57517->127.0.0.1:10001: read: connection reset by peer
