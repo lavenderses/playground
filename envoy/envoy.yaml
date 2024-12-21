@@ -73,7 +73,7 @@ static_resources:
               - match:
                   prefix: "/"
                 route:
-                  host_rewrite_literal: localhost:8080
+                  host_rewrite_literal: fastapi.default.svc.cluster.local:8080
                   cluster: fastapi
           http_filters:
           - name: envoy.filters.http.router
@@ -114,6 +114,6 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: web
+                address: fastapi.default.svc.cluster.local
                 port_value: 8080
 
