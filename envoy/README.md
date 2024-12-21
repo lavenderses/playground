@@ -11,6 +11,6 @@
 
 ```shell
 $ make build-envoy
-$ kubectl apply -f manifest/envoy.yaml
+$ kubectl apply -f envoy/manifest.yaml
 ```
 
