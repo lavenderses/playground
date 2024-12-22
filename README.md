@@ -1,30 +1,5 @@
 # Envoy sandbox with
 
-## Startup
-
-```shell
-$ d compose up
-```
-
-## Restart
-
-```shell
-$ d compose restart envoy
-```
-
-## Attack
-
-```shell
-$ vegeta attack -duration=60s -targets=attack.txt -rate=40 | tee results.bin | vegeta report
-```
-
-## Cleanup
-
-```shell
-$ d compose down
-$ d rmi envoy-web envoy-envoy
-```
-
 ## Startup k8s
 
 ```shell
@@ -38,5 +13,20 @@ $ eval $(minikube docker-env)
 
 See each README in sub directories.
 
-- [Fast API](./fastapi/README.md)
-- [Envoy](./envoy/README.md)
+- [Fast API](./fastapi)
+- [Envoy](./envoy)
+- [Monitoring](./monitoring)
+
+## Attack
+
+```shell
+$ vegeta attack -duration=60s -targets=attack.txt -rate=40 | tee results.bin | vegeta report
+```
+
+## Cleanup
+
+```shell
+$ minikube stop
+$ minikube remove # to remove all resources
+```
+
