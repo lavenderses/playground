@@ -1,0 +1,196 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: monitoring
+  namespace: default
+data:
+  prometheus.yml: |
+    global:
+      scrape_interval: 3s
+      scrape_timeout: 2s
+      evaluation_interval: 3s
+    alerting:
+      alertmanagers:
+      - static_configs:
+          - targets: []
+        scheme: http
+        timeout: 10s
+        api_version: v2
+    scrape_configs:
+    - job_name: prometheus
+      honor_timestamps: true
+      scrape_interval: 3s
+      scrape_timeout: 2s
+      metrics_path: /metrics
+      scheme: http
+      static_configs:
+      - targets:
+          - localhost:9090
+
+    - job_name: fastapi
+      scrape_interval: 3s
+      metrics_path: /metrics
+      static_configs:
+        - targets:
+          - fastapi.default.svc.cluster.local:8080
+
+    # - job_name: 'envoy'
+    #   scrape_interval: 3s
+    #   metrics_path: '/metrics'
+    #   static_configs:
+    #     - targets: ['envoy:9901']
+  datasource.yml: |
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        type: prometheus
+        url: http://prometheus.default.svc.cluster.local:9090 
+        isDefault: true
+        access: proxy
+        editable: true
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+  namespace: default
+  labels:
+    app: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: prometheus
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: prometheus
+    spec:
+      containers:
+        - name: prometheus
+          image: prom/prometheus:latest
+          imagePullPolicy: IfNotPresent
+          # https://prometheus.io/docs/prometheus/latest/management_api/#health-check
+          livenessProbe:
+            httpGet:
+              path: /-/healthy
+              port: 9090
+            initialDelaySeconds: 5
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /-/ready
+              port: 9090
+            initialDelaySeconds: 5
+            timeoutSeconds: 2
+            successThreshold: 1
+            failureThreshold: 3
+            periodSeconds: 10
+          env:
+            - name: TZ
+              value: 'Asia/Tokyo'
+          ports:
+            - containerPort: 9090
+          volumeMounts:
+            - name: prometheus-yaml
+              mountPath: /etc/prometheus
+      volumes:
+          - name: prometheus-yaml
+            configMap:
+              name: monitoring
+              items:
+                - key: "prometheus.yml"
+                  path: "prometheus.yml"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+  namespace: default
+  labels:
+    app: grafana
+spec:
+  selector:
+    matchLabels:
+      app: grafana
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: grafana
+    spec:
+      containers:
+        - name: grafana
+          image: grafana/grafana:latest
+          imagePullPolicy: IfNotPresent
+          # https://grafana.com/docs/grafana/latest/developers/http_api/other/#health-api
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+            initialDelaySeconds: 5
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+            initialDelaySeconds: 5
+            timeoutSeconds: 2
+            successThreshold: 1
+            failureThreshold: 3
+            periodSeconds: 10
+          env:
+            - name: TZ
+              value: 'Asia/Tokyo'
+            - name: GF_SECURITY_ADMIN_USER
+              value: admin
+            - name: GF_SECURITY_ADMIN_PASSWORD
+              value: password
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - name: grafana-yaml
+              mountPath: /etc/grafana/provisioning/datasources
+      volumes:
+        - name: grafana-yaml
+          configMap:
+            name: monitoring
+            items:
+              - key: "datasource.yml"
+                path: "datasource.yml"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+  namespace: default
+spec:
+  selector:
+    app: prometheus
+  type: ClusterIP
+  ports:
+  - name: prometheus
+    port: 9090
+    targetPort: 9090
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+  namespace: default
+spec:
+  selector:
+    app: grafana
+  type: ClusterIP
+  ports:
+  - name: grafana
+    port: 3000
+    targetPort: 3000
+---
+

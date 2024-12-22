@@ -15,4 +15,24 @@ spec:
                 name: envoy
                 port:
                   number: 10001
+    - host: grafana.lavenderses.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: grafana
+                port:
+                  number: 3000
+    - host: prometheus.lavenderses.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: prometheus
+                port:
+                  number: 9090
 
