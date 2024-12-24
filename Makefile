@@ -1,12 +1,18 @@
-.PHONY: build-fastapi build clean-image
+.PHONY: build-fastapi spring-app build clean-image
 
 build-fastapi:
 	docker login
 	docker build -t nakanoi/fastapi:latest fastapi
 	docker push nakanoi/fastapi:latest
 
-build: build-fastapi build-envoy
+build-spring-app:
+	docker login
+	docker build -t nakanoi/spring-app:latest spring-app
+	docker push nakanoi/spring-app:latest
+
+build: build-fastapi spring-app build-envoy
 
 clean-image:
 	docker rmi nakanoi/fastapi:latest
+	docker rmi nakanoi/spring-app:latest
 

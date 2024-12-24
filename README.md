@@ -16,6 +16,7 @@ See each README in sub directories.
 - [Fast API](./fastapi)
 - [Envoy](./envoy)
 - [Monitoring](./monitoring)
+- [Spring Boot App](./spring-app)
 
 ## Attack
 
