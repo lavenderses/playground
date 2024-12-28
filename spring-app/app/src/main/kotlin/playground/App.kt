@@ -3,13 +3,35 @@
  */
 package playground
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategies.SnakeCaseStrategy
+import com.fasterxml.jackson.databind.annotation.JsonNaming
+import kotlinx.coroutines.delay
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
+import org.springframework.context.annotation.Bean
+import org.springframework.web.reactive.function.server.RouterFunction
+import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.bodyValueAndAwait
+import org.springframework.web.reactive.function.server.coRouter
+
+@SpringBootApplication
 class App {
-    val greeting: String
-        get() {
-            return "Hello World!"
+
+    @JsonNaming(SnakeCaseStrategy::class)
+    data class Response(
+        val sleepMillis: Long,
+    )
+
+    @Bean
+    fun router(): RouterFunction<ServerResponse> = coRouter {
+            GET("/{sleepMillis}") { req ->
+                val sleepMillis = checkNotNull(req.pathVariable("sleepMillis")).toLong()
+                delay(sleepMillis)
+                ok().bodyValueAndAwait(Response(sleepMillis))
+            }
         }
 }
 
-fun main() {
-    println(App().greeting)
+fun main(args: Array<String>) {
+    runApplication<App>(*args)
 }
