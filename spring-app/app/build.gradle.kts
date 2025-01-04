@@ -15,6 +15,7 @@ plugins {
     application
 
     id("org.springframework.boot") version "3.4.1" apply false
+    id("com.google.cloud.tools.jib") version "3.4.4"
 }
 
 repositories {
@@ -35,4 +36,13 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass.set("playground.AppKt")
+}
+
+jib {
+    to {
+        image = "nakanoi/spring-app"
+        tags = setOf(
+          "latest",
+        )
+    }
 }

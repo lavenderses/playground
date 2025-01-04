@@ -66,10 +66,17 @@ data:
                   domains: ["*"]
                   routes:
                   - match:
-                      prefix: "/"
+                      prefix: "/fastapi/"
                     route:
                       host_rewrite_literal: fastapi.default.svc.cluster.local:8080
+                      prefix_rewrite: "/"
                       cluster: fastapi
+                  - match:
+                      prefix: "/spring-app/"
+                    route:
+                      host_rewrite_literal: spring-app.default.svc.cluster.local:9090
+                      prefix_rewrite: "/"
+                      cluster: spring-app
               http_filters:
               - name: envoy.filters.http.router
                 typed_config:
@@ -90,6 +97,20 @@ data:
                   socket_address:
                     address: fastapi.default.svc.cluster.local
                     port_value: 8080
+      - name: spring-app
+        connect_timeout: 20s
+        type: LOGICAL_DNS
+        dns_lookup_family: V4_ONLY
+        lb_policy: ROUND_ROBIN
+        load_assignment:
+          cluster_name: spring-app
+          endpoints:
+          - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address:
+                    address: spring-app.default.svc.cluster.local
+                    port_value: 9090
 ---
 apiVersion: apps/v1
 kind: Deployment

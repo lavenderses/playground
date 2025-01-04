@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-app
+  labels:
+    app: spring-app
+spec:
+  type: ClusterIP
+  ports:
+    - name: spring-app
+      port: 9090
+      targetPort: 9090
+  selector:
+    app: spring-app
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-app
+  labels:
+    app: spring-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-app
+  template:
+    metadata:
+      labels:
+        app: spring-app
+    spec:
+      containers:
+        - name: spring-app
+          image: nakanoi/spring-app:latest
+          ports:
+            - containerPort: 9090
+---
