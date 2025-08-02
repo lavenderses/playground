@@ -34,6 +34,12 @@ See each README in sub directories.
   - monitors application pods with Prometheus Service Discovery. See this [diff](https://github.com/lavenderses/playground/compare/a940044364375ad73a1ba354bca2639e5f70eeee..0b4d55ab1de00e5774d01a1f7f6e4221d5afc4f5).
 - [Spring Boot App](./spring-app)
 
+### Prometheus metrics
+
+<img width="1900" height="959" alt="image" src="https://github.com/user-attachments/assets/875d0742-c8b3-4870-938d-becff147be47" />
+
+<img width="1900" height="959" alt="image" src="https://github.com/user-attachments/assets/e290cdce-9bf3-4af7-9699-771b357e2ec8" />
+
 ## Attack
 
 ```shell
