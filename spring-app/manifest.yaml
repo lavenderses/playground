@@ -13,6 +13,21 @@ spec:
   selector:
     app: spring-app
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-app-actuator
+  labels:
+    app: spring-app-actuator
+spec:
+  type: ClusterIP
+  ports:
+    - name: spring-app-actuator
+      port: 9091
+      targetPort: 9091
+  selector:
+    app: spring-app
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -34,4 +49,32 @@ spec:
           image: nakanoi/spring-app:latest
           ports:
             - containerPort: 9090
+            - containerPort: 9091
 ---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spring-app-ingress
+  namespace: default
+spec:
+  rules:
+  - host: spring-app.lavenderses.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: spring-app
+            port:
+              number: 9090
+  - host: spring-app-actuator.lavenderses.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: spring-app-actuator
+            port:
+              number: 9091

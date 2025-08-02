@@ -47,4 +47,7 @@ jib {
           "latest",
         )
     }
+    container {
+        ports = listOf("9090", "9091")
+    }
 }
