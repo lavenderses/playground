@@ -36,6 +36,10 @@ spec:
       app: fastapi
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: /metrics
       labels:
         app: fastapi
     spec:
@@ -52,3 +56,22 @@ spec:
           #     cpu: "1024Mi"
           #     memory: "1000m"
 ---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fastapi-ingress
+  namespace: default
+spec:
+  rules:
+  - host: fastapi.lavenderses.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: fastapi
+            port:
+              number: 8080
+---
+
