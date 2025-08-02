@@ -7,7 +7,8 @@ build-fastapi:
 
 build-spring-app:
 	docker login
-	docker build -t nakanoi/spring-app:latest spring-app
+	cd spring-app; \
+		./gradlew :app:jibDockerBuild
 	docker push nakanoi/spring-app:latest
 
 build: build-fastapi spring-app build-envoy

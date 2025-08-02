@@ -28,6 +28,8 @@ dependencies {
     implementation(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.9.0"))
 
     implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    runtimeOnly("io.micrometer:micrometer-registry-prometheus")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
