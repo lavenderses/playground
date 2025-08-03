@@ -42,9 +42,9 @@ spec:
   template:
     metadata:
       annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/port: "9091"
-        prometheus.io/path: /actuator/prometheus
+        lavenderses.prometheus.io/scrape: "true"
+        lavenderses.prometheus.io/port: "9091"
+        lavenderses.prometheus.io/path: /actuator/prometheus
       labels:
         app: spring-app
     spec:

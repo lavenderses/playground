@@ -16,11 +16,11 @@ Add the following annotations to make the pod findable by Prometheus.
 
 ```yaml
 annotations:
-  prometheus.io/scrape: "true"
+  lavenderses.prometheus.io/scrape: "true"
   # target port
-  prometheus.io/port: "8080"
+  lavenderses.prometheus.io/port: "8080"
   # metrics target endpoint
-  prometheus.io/path: /metrics
+  lavenderses.prometheus.io/path: /metrics
 ```
 
 ## Runs
