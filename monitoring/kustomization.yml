@@ -1,0 +1,9 @@
+resources:
+  - ./manifest.yaml
+
+configMapGenerator:
+  - name: monitoring
+    files:
+      - ./config-map/datasource.yml
+      - ./config-map/prometheus.yml
+

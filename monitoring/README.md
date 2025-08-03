@@ -26,6 +26,6 @@ annotations:
 ## Runs
 
 ```shell
-$ kubectl apply -f monitoring/manifest.yaml
+$ kubectl apply -k monitoring
 ```
 
