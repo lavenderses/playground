@@ -6,6 +6,7 @@ resources:
   # - github.com/argoproj/argo-cd//manifests/cluster-install?ref=stable
   - namespace.yaml
   - ingress.yaml
+  - root-app/projects.yaml
 
 patches:
   - path: configmap.yaml

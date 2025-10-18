@@ -26681,6 +26681,27 @@ spec:
           optional: true
         name: argocd-cmd-params-cm
 ---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: lavenderses-playground
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: argocd
+    server: https://kubernetes.default.svc
+  - namespace: test-nginx
+    server: https://kubernetes.default.svc
+  - namespace: default
+    server: https://kubernetes.default.svc
+  orphanedResources:
+    warn: false
+  sourceRepos:
+  - '*'
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
