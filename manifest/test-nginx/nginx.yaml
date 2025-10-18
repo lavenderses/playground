@@ -1,0 +1,17 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: test-nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-nginx
+  namespace: test-nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+      - containerPort: 80
+
