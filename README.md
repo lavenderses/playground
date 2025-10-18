@@ -24,6 +24,23 @@ nodes:
 EOF
 ```
 
+## Start ArgoCD
+
+apps can be executed as Application of ArgoCD.
+To start them, run the following command.
+
+```sh
+# this will start ArgoCD servers
+make install-argocd-with-build
+# this will add app of apps, including self-managed ArgoCD
+make install-root-app-with-build
+```
+
+### apps in ArgoCD
+
+- [ArgoCD server](./argocd-install/)
+- [test-nginx](./manifest/test-nginx/)
+
 ## Startup each app
 
 See each README in sub directories.
